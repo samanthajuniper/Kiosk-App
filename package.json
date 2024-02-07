@@ -4,14 +4,16 @@
   "description": "This is a self-service restaurant kiosk app to practice my full stack skill set.",
   "main": "app.js",
   "scripts": {
-    "start": "tsc && node dist/app.js",
+    "start": "tsc && nodemon dist/app.js",
     "lint": "eslint . --ext .ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^16.4.1",
+    "express": "^4.17.1",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@types/express": "^4.17.1",

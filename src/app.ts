@@ -1,8 +1,12 @@
 import express from "express";
+import dotenv from "dotenv";
+import menuRoutes from "./routes/menuRoutes";
+
+dotenv.config();
 const app = express();
+const port = process.env.PORT;
 
-app.get("/", function (req, res) {
-  res.send("Hello World");
-});
+//middleware
+app.use("/api/menu", menuRoutes);
 
-app.listen(3000);
+app.listen(port);
