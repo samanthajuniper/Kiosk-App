@@ -1,4 +1,10 @@
 import express from "express";
+import {
+  createMenuItem,
+  deleteMenuItemById,
+  getMenuItems,
+  updateMenuItemById,
+} from "../controllers/menuController";
 const router = express.Router();
 
 // biz requirements
@@ -6,24 +12,12 @@ const router = express.Router();
 //  get all menu items
 //  get all categories
 //  get menu item by category
-// admin user needs
+// admin user needs -- in reality, this should be a separate app
 //  create, update, delete menu item
 //  create, update, delete category
 
-router.route("/").get((req, res) => {
-  res.status(200).json({ message: "get all menu items" });
-});
+router.route("/").get(getMenuItems).post(createMenuItem);
 
-router.route("/").post((req, res) => {
-  res.status(200).json({ message: "create menu item" });
-});
-
-router.route("/:id").post((req, res) => {
-  res.status(200).json({ message: "update menu item" });
-});
-
-router.route("/:id").delete((req, res) => {
-  res.status(200).json({ message: "delete menu item" });
-});
+router.route("/:id").post(updateMenuItemById).delete(deleteMenuItemById);
 
 export = router;
