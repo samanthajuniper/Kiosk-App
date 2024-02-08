@@ -4,7 +4,7 @@ import {
   deleteMenuItemById,
   getMenuItems,
   updateMenuItemById,
-} from "../controllers/menuController";
+} from "../controllers/menu/menuController";
 const router = express.Router();
 
 // biz requirements
