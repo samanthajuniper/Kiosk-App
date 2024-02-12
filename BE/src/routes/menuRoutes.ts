@@ -20,4 +20,4 @@ router.route("/").get(getMenuItems).post(createMenuItem);
 
 router.route("/:id").post(updateMenuItemById).delete(deleteMenuItemById);
 
-export = router;
+export default router;

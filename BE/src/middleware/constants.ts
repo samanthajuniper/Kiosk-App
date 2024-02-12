@@ -3,6 +3,7 @@ const ERROR_STATUS: Record<string, number> = {
   UNAUTHORIZED: 401,
   FORBIDDEN: 403,
   NOT_FOUND: 404,
+  SERVER: 500,
 };
 
 export { ERROR_STATUS };
